@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación de array de objeto estudiante</title>
+    <script src="Manipulación de array de objeto estudiante.js" charset="utf-8"></script>
+    <style>
+        body{
+            background: url(fondo.jpg);
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-style: oblique
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Manipulación de array de objeto estudiante</h1>
+        <hr size="5" color="white"></hrsize>
+        <br>
+        <table border="5">
+            <th>Descripción</th>
+            <th>Datos</th>
+            <tbody>
+                <tr>
+                    <td>Cédula</td>
+                    <td><input type="text" id="ced" name="ced" placeholder="Cédula"></td>
+                </tr>
+                <tr>
+                    <td>Nombres</td>
+                    <td><input type="text" id="nom" name="nom" placeholder="Nombres"></td>
+                </tr>
+                <tr>
+                    <td>Apellidos</td>
+                    <td><input type="text" id="ape" name="ape" placeholder="Apellidos"></td>
+                </tr>
+                <tr>
+                    <td>Nota 1</td>
+                    <td><input type="text" id="n1" name="n1" placeholder="Nota 1"></td>
+                </tr>
+                <tr>
+                    <td>Nota 2</td>
+                    <td><input type="text" id="n2" name="n2" placeholder="Nota 2"></td>
+                </tr>
+                <tr>
+                    <td>Nota 3</td>
+                    <td><input type="text" id="n3" name="n3" placeholder="Nota 3"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table border="5">
+            <tr>
+                <td><button onclick="agregar()">AGREGAR</button></td>
+            </tr>
+        </table>
+
+        <table id="gar" style="display: none;" border="5" style="margin-top: 20px;">
+            <tr>
+                <td>
+                    <select id="opciones">
+
+                        <option value="1">Cédula</option>
+                        <option value="2">Nombre</option>
+                        <option value="3">Apellido</option>
+
+                    </select>
+                </td>
+                <td>
+                    <input type="text" id="busca">
+                </td>
+                <td>
+                    <button onclick="buscar()" style="background: white; padding: 10px">Buscar</button>
+                </td>
+            </tr>
+        </table>
+        
+        <table id="tbEdit" style="display: none;" border="5">
+            <caption style="background: rgb(255, 102, 0); padding: 10px; color: white; margin-top: 20px">Editar Estudiante</caption>
+            <th>Descripción</th>
+            <th>Datos</th>
+            <tbody>
+                <tr>
+                    <td>Cédula</td>
+                    <td><input type="text" id="eced" placeholder="Cédula"></td>
+                </tr>
+                <tr>
+                    <td>Nombres</td>
+                    <td><input type="text" id="enom" placeholder="Nombres"></td>
+                </tr>
+                <tr>
+                    <td>Apellidos</td>
+                    <td><input type="text" id="eape" placeholder="Apellidos"></td>
+                </tr>
+                <tr>
+                    <td>Nota 1</td>
+                    <td><input type="text" id="en1" placeholder="Nota 1"></td>
+                </tr>
+                <tr>
+                    <td>Nota 2</td>
+                    <td><input type="text" id="en2" placeholder="Nota 2"></td>
+                </tr>
+                <tr>
+                    <td>Nota 3</td>
+                    <td><input type="text" id="en3" placeholder="Nota 3"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button style="padding: 15px;" onclick="saveEdit()">Editar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h1>Listado de estudiantes</h1>
+        <br>
+        <table border="5">
+            <th>Cédula</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th>Nota 3</th>
+            <th>Nota Final</th>
+            <th>Estado</th>
+            <th>Reconocimiento</th>
+            <tbody id="cuerpo"></tbody>
+
+        </table>
+        <h1>Análisis de resultados del curso</h1>
+        <table border="5">
+            <th>Descripción</th> <th>Resultado</th>
+            <tbody id="cuerpo1"></tbody>
+        </table>
+        <br>
+        <script src="Manipulación de array de objeto estudiante.js"></script>
+    </center>
+</body>
+</html>
